@@ -1,0 +1,103 @@
+/* Global Style */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  margin: 0;
+  padding: 0;
+  animation: fadeInBody 1.5s ease-in-out;
+}
+
+/* Container */
+.container {
+  max-width: 700px;
+  margin: 60px auto;
+  background: white;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  animation: slideIn 1.2s ease-out;
+  border: 4px solid #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Biodata Item */
+.biodata-item {
+  margin: 20px 0;
+  padding: 15px 20px;
+  border-left: 6px solid #2196f3;
+  background: #f1f9ff;
+  border-radius: 12px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s forwards;
+  transition: background 0.4s, transform 0.4s;
+}
+
+.biodata-item:hover {
+  background: #e0f7fa;
+  transform: translateY(0) scale(1.02);
+}
+
+.biodata-item:nth-child(2) { animation-delay: 0.3s; }
+.biodata-item:nth-child(3) { animation-delay: 0.5s; }
+.biodata-item:nth-child(4) { animation-delay: 0.7s; }
+.biodata-item:nth-child(5) { animation-delay: 0.9s; }
+.biodata-item:nth-child(6) { animation-delay: 1.1s; }
+.biodata-item:nth-child(7) { animation-delay: 1.3s; }
+.biodata-item:nth-child(8) { animation-delay: 1.5s; }
+
+.biodata-item label {
+  font-weight: bold;
+  color: #0d47a1;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.1em;
+}
+
+.biodata-item span {
+  color: #333;
+  font-size: 1.05em;
+}
+
+/* Animations */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
